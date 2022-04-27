@@ -82,13 +82,15 @@ const Image = styled.img`
   display: block;
   width: 100%;
   border-radius: 16px 16px 4px 4px;
-  transition: transform 0.4s;
+  transition: transform 0.4s, filter 0.4s;
   transform-origin: center 80%;
+  filter: blur(2px);
 
   &:hover,
   &:focus {
     transform: scale(1.075);
-    transition: transform 0.2s;
+    transition: transform 0.2s, filter 0.2s;
+    filter: blur(0);
   }
 `;
 
