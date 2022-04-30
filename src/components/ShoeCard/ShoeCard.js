@@ -85,12 +85,15 @@ const Image = styled.img`
   transition: transform 0.4s, filter 0.4s;
   transform-origin: center 80%;
   filter: blur(2px);
+  will-change: transform;
 
-  &:hover,
-  &:focus {
-    transform: scale(1.075);
-    transition: transform 0.2s, filter 0.2s;
-    filter: blur(0);
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover,
+    &:focus {
+      transform: scale(1.075);
+      transition: transform 0.2s, filter 0.2s;
+      filter: blur(0);
+    }
   }
 `;
 
