@@ -49,11 +49,19 @@ const fadeIn = keyframes`
 `;
 
 const slideIn = keyframes`
-  from {
+  /* from {
     transform: translateX(100%);
   }
   to {
     transform: translateX(0);
+  } */
+
+  from {
+    transform: perspective(200px) rotateX(90deg) ;
+  }
+
+  to {
+    transform: perspective(200px) rotateX(0deg);
   }
 `;
 
